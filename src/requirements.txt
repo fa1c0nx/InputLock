@@ -1,0 +1,4 @@
+psutil
+keyboard
+pystray
+Pillow
