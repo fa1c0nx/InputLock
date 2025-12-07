@@ -1,17 +1,20 @@
-# InputLock v1.0.0
+# InputLock v1.0.1
 
-InputLock is a lightweight Windows utility for blocking custom key combinations in targeted applications. It integrates a Go-based low-level hook for reliable key blocking and minimizes to the system tray for unobtrusive use.
+InputLock is a lightweight Windows utility for blocking custom key combinations in targeted applications. It integrates a Go-based low-level hook for reliable key blocking and a Python GUI for easy configuration. Key combinations can now be dynamically loaded from JSON, with targeted PID filtering and live updates.
 
 ---
 
 ## Features
 
-* Select running processes to target.
-* Define custom key combinations to block.
-* Supports both manual selection and live key capture.
+* Select running processes to target, with PID dropdown and live refresh.
+* Define custom key combinations to block, using `combos.json` for dynamic management.
+* Supports manual selection, live key capture, and immediate combo persistence.
+* Normalizes keys for consistent mapping across sessions.
+* Delete combos directly from the GUI TreeView.
 * Integrates a low-level Go hook (`hook.exe`) for reliable blocking.
-* Minimizes to the system tray with restore and exit options.
-* Easy-to-use GUI built with Tkinter.
+* Dynamic combo engine replaces static Alt+Esc block.
+* Minimizes to the system tray with restore and exit options (pystray removed for simplified lifecycle).
+* Easy-to-use Python GUI built with Tkinter.
 * Fully self-contained Python executable for easy distribution.
 
 ---
@@ -58,8 +61,8 @@ For users who don’t want to build from source:
 ## Usage
 
 1. Launch `InputLock.exe` as admin.
-2. Select the target process from the dropdown menu.
-3. Add or remove key combinations to block.
+2. Select the target process from the PID dropdown.
+3. Add, remove, or edit key combinations in the GUI.
 4. Apply hooks to activate blocking.
 5. Minimize to the system tray for background operation.
 6. Restore or exit the application from the tray icon menu.
