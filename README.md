@@ -57,7 +57,7 @@ For users who don’t want to build from source:
 
 ## Usage
 
-1. Launch `InputLock.exe`.
+1. Launch `InputLock.exe` as admin.
 2. Select the target process from the dropdown menu.
 3. Add or remove key combinations to block.
 4. Apply hooks to activate blocking.
